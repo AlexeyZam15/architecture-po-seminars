@@ -1,5 +1,5 @@
 class Employer:
-    def __init__(self, name: str, value_time: int):
+    def __init__(self, name: str):
         self.name = name
 
     def __str__(self):
