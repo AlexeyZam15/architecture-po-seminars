@@ -8,7 +8,13 @@ class Presenter:
         self.__tickets_app = tickets_app
 
     def start(self):
-        print("Добро пожаловать в приложение TicketsApp.")
-        print("Сначала нужно отобрать билеты.")
-        self.__view.show_list(
-            self.__tickets_app.search_ticket(self.__view.get_fields(self.__tickets_app.tickets_fields.keys())))
+        self.__view.intro("Добро пожаловать в приложение TicketsApp.")
+        self.__view.show_text("Сначала нужно отобрать билеты.")
+        tickets = self.__tickets_app.search_ticket(self.__view.get_fields(self.__tickets_app.tickets_fields))
+        self.__view.show_list(tickets)
+        if self.__view.confirmation("Хотите купить эти билеты?"):
+            if self.__tickets_app.buy_tickets(tickets):
+                self.__view.show_text("Билеты куплены")
+            else:
+                self.__view.show_text("Не удалось купить билеты")
+        self.__view.show_list(self.__tickets_app.search_ticket({}), "Оставшиеся билеты")
