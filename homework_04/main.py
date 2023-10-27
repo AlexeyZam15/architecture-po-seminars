@@ -8,7 +8,7 @@ from homework_04.tickets_app import TicketsApp
 from homework_04.tickets_provider import TicketsProvider
 from homework_04.views.console_view import ConsoleView
 
-customer = Customer(1, "Алексей")
+customer = Customer(1, "Алексей", "+74565464645")
 cash_provider = CashProvider(345345345, 60000)
 now = datetime.now()
 available_tickets = [Ticket(i * 10000, i * 10, i, now.strftime('%m/%d/%Y'),

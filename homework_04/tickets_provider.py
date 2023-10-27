@@ -6,26 +6,26 @@ class TicketsProvider:
 
     def __init__(self, available_tickets: list[Ticket], name: str):
         self.__available_tickets = available_tickets
+        self.__sold_tickets: list[Ticket] = []
         self.__name = name
-        self.__available_tickets_count = len(self.__available_tickets)
+
+    @property
+    def sold_tickets(self):
+        return self.__sold_tickets
 
     @property
     def available_tickets_count(self):
-        return self.__available_tickets_count
+        return len(self.__available_tickets)
 
     @property
     def name(self):
         return self.__name
 
-    @staticmethod
-    def update_ticket(ticket: Ticket):
-        ticket.is_sold = True
-
-    def get_tickets(self, fields: dict):
-        if not fields:
+    def get_tickets(self, search_fields: dict):
+        if not search_fields:
             return self.__available_tickets.copy()
         ticket_dir = dir(self.__available_tickets[0])
-        filtered_fields = {k: v for k, v in fields.items() if k in ticket_dir}
+        filtered_fields = {k: v for k, v in search_fields.items() if k in ticket_dir}
 
         tickets = []
         for i in self.__available_tickets:
@@ -35,15 +35,11 @@ class TicketsProvider:
                         tickets.append(i)
         return tickets
 
-    @staticmethod
-    def ticket_fields():
-        return Ticket.fields()
-
-    def buy_tickets(self, tickets: list[Ticket]):
+    def sell_tickets(self, tickets: list[Ticket]):
         for ticket in tickets:
             ticket.is_sold = True
+            self.__sold_tickets.append(ticket)
             self.__available_tickets.remove(ticket)
-        self.__available_tickets_count = len(self.__available_tickets)
 
     def fields(self):
         return self.__FIELDS

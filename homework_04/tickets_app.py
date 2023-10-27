@@ -1,5 +1,6 @@
 from homework_04.cash_provider import CashProvider
 from homework_04.customer import Customer
+from homework_04.ticket import Ticket
 from homework_04.tickets_provider import TicketsProvider
 
 
@@ -9,8 +10,8 @@ class TicketsApp:
         self.__customer = customer
         self.__cash = cash
         self.__ticket_provider = ticket_provider
-        self.__tickets = []
-        self.__tickets_fields = self.__ticket_provider.ticket_fields()
+        self.__tickets: list[Ticket] = []
+        self.__tickets_fields = Ticket.fields()
         self.__is_authorized = False
 
     @property
@@ -25,14 +26,15 @@ class TicketsApp:
     def tickets(self):
         return self.__tickets
 
-    def buy_tickets(self, tickets: list):
+    def buy_tickets(self, tickets: list[Ticket]):
         if self.__cash.buy(sum([ticket.price for ticket in tickets])):
-            self.__ticket_provider.buy_tickets(tickets)
+            self.__ticket_provider.sell_tickets(tickets)
             self.__tickets.extend(tickets)
             return True
+        return False
 
-    def search_ticket(self, fields: dict):
-        return self.__ticket_provider.get_tickets(fields)
+    def search_ticket(self, search_fields: dict):
+        return self.__ticket_provider.get_tickets(search_fields)
 
     def authorization(self):
         self.__is_authorized = True
