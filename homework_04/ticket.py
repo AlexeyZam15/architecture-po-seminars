@@ -39,7 +39,7 @@ class Ticket:
         return self.__ticket_number
 
     @staticmethod
-    def get_fields():
+    def fields():
         return Ticket.__FIELDS
 
     def __str__(self):

@@ -1,7 +1,13 @@
+"""
+Содержит абстрактный класс представления.
+"""
 from abc import ABC, abstractmethod
 
 
 class View(ABC):
+    """
+    Абстрактный класс представления
+    """
 
     @abstractmethod
     def get_fields(self, fields: dict):
@@ -20,5 +26,17 @@ class View(ABC):
         pass
 
     @abstractmethod
-    def intro(self, text: str):
+    def intro(self):
+        pass
+
+    @abstractmethod
+    def authorization(self, authorization_function):
+        pass
+
+    @abstractmethod
+    def search_tickets(self, fields: dict):
+        pass
+
+    @abstractmethod
+    def show_data(self, data: dict[dict]):
         pass

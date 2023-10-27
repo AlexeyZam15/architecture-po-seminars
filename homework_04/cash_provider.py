@@ -1,39 +1,45 @@
-from homework_04.customer import Customer
+"""
+Содержит класс для оплаты услуг.
+"""
 
 
 class CashProvider:
+    """Класс для оплаты услуг. Для выполнения действий требуется авторизация"""
+    __FIELDS = {"карта": "card", "баланс": "balance"}
+
     def __init__(self, card: int, balance: int):
         self.__card = card
         self.__balance = balance
-        # self.__is_authorization = False
+        self.__is_authorized = False
+
+    @property
+    def is_authorized(self):
+        return self.__is_authorized
+
+    @property
+    def balance(self):
+        if self.__is_authorized:
+            return self.__balance
 
     @property
     def card(self):
-        return self.__card
-
-    # @property
-    # def is_authorization(self):
-    #     return self.__is_authorization
-    #
-    # @is_authorization.setter
-    # def is_authorization(self, value):
-    #     self.__is_authorization = value
-
-    # def withdraw(self, amount: int):
-    #     if self.__is_authorization and amount < self.__balance:
-    #         self.__balance -= amount
-    #         return True
-    #     return False
-    #
-    # def deposit(self, amount: int):
-    #     if self.__is_authorization:
-    #         self.__balance += amount
-    #         return True
-    #     return False
+        if self.__is_authorized:
+            return self.__card
 
     def buy(self, price: int):
-        # if self.__is_authorization:
-        if self.__balance >= price:
-            self.__balance -= price
-            return True
+        if self.__is_authorized:
+            if self.__balance >= price:
+                self.__balance -= price
+                return True
         return False
+
+    def authorization(self):
+        self.__is_authorized = True
+        return True
+
+    def deauthorization(self):
+        self.__is_authorized = False
+        return False
+
+    def fields(self):
+        return self.__FIELDS
