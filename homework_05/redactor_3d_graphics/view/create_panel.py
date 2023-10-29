@@ -1,0 +1,2 @@
+class CreatePanel:
+    pass

@@ -1,0 +1,2 @@
+class SavePanel:
+    pass
