@@ -1,0 +1,2 @@
+class ViewPanel:
+    pass
