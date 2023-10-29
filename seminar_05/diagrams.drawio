@@ -1,13 +1,13 @@
-<mxfile host="app.diagrams.net" modified="2023-10-29T07:49:56.145Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.5845.931 YaBrowser/23.9.3.931 Yowser/2.5 Safari/537.36" etag="xx-sAmGwxps-s34apulK" version="22.0.8" type="device">
+<mxfile host="app.diagrams.net" modified="2023-10-29T10:06:46.882Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.5845.931 YaBrowser/23.9.3.931 Yowser/2.5 Safari/537.36" etag="3caLoe2wMQvgYzp-JHkh" version="22.0.8" type="device">
   <diagram name="Страница — 1" id="RJlJwBfx6ssVay7rbxj-">
-    <mxGraphModel dx="2103" dy="2192" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="3606" dy="1754" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
         <mxCell id="coksm_kmtghOM9rdvQji-69" value="" style="group" vertex="1" connectable="0" parent="1">
-          <mxGeometry x="40" y="460" width="652.74" height="330" as="geometry" />
+          <mxGeometry x="40" y="460" width="610" height="330" as="geometry" />
         </mxCell>
-        <mxCell id="coksm_kmtghOM9rdvQji-54" value="&lt;span style=&quot;font-size: 36px;&quot;&gt;Вертикальные срезы&lt;br&gt;Маркетплейс&lt;/span&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="coksm_kmtghOM9rdvQji-69">
+        <mxCell id="coksm_kmtghOM9rdvQji-54" value="&lt;span style=&quot;font-size: 36px;&quot;&gt;Маркетплейс&lt;/span&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="coksm_kmtghOM9rdvQji-69">
           <mxGeometry x="19.67741935483871" width="364.03225806451616" height="30" as="geometry" />
         </mxCell>
         <mxCell id="coksm_kmtghOM9rdvQji-55" value="" style="group;align=left;fontSize=15;" vertex="1" connectable="0" parent="coksm_kmtghOM9rdvQji-69">
@@ -19,7 +19,7 @@
         <mxCell id="coksm_kmtghOM9rdvQji-57" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="coksm_kmtghOM9rdvQji-56">
           <mxGeometry width="423.06451612903226" height="87" as="geometry" />
         </mxCell>
-        <mxCell id="coksm_kmtghOM9rdvQji-58" value="&lt;font style=&quot;font-size: 15px;&quot;&gt;1, 2, 3, 5, 6&lt;/font&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;align=left;" vertex="1" parent="coksm_kmtghOM9rdvQji-57">
+        <mxCell id="coksm_kmtghOM9rdvQji-58" value="&lt;font style=&quot;font-size: 15px;&quot;&gt;1, 2, 3&lt;/font&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;align=left;" vertex="1" parent="coksm_kmtghOM9rdvQji-57">
           <mxGeometry width="423" height="87" as="geometry">
             <mxRectangle width="423" height="87" as="alternateBounds" />
           </mxGeometry>
@@ -27,7 +27,7 @@
         <mxCell id="coksm_kmtghOM9rdvQji-59" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="coksm_kmtghOM9rdvQji-56">
           <mxGeometry y="87" width="423.06451612903226" height="86" as="geometry" />
         </mxCell>
-        <mxCell id="coksm_kmtghOM9rdvQji-60" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;2, 3, 4, 6, 7&lt;/font&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;align=left;" vertex="1" parent="coksm_kmtghOM9rdvQji-59">
+        <mxCell id="coksm_kmtghOM9rdvQji-60" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;2, 3, 4&lt;/font&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;align=left;" vertex="1" parent="coksm_kmtghOM9rdvQji-59">
           <mxGeometry width="423" height="86" as="geometry">
             <mxRectangle width="423" height="86" as="alternateBounds" />
           </mxGeometry>
@@ -35,7 +35,7 @@
         <mxCell id="coksm_kmtghOM9rdvQji-61" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="coksm_kmtghOM9rdvQji-56">
           <mxGeometry y="173" width="423.06451612903226" height="87" as="geometry" />
         </mxCell>
-        <mxCell id="coksm_kmtghOM9rdvQji-62" value="&lt;font style=&quot;font-size: 15px;&quot;&gt;2, 3, 4, 5, 6, 7&lt;/font&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;align=left;" vertex="1" parent="coksm_kmtghOM9rdvQji-61">
+        <mxCell id="coksm_kmtghOM9rdvQji-62" value="&lt;font style=&quot;font-size: 15px;&quot;&gt;2, 3, 4&lt;/font&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;align=left;" vertex="1" parent="coksm_kmtghOM9rdvQji-61">
           <mxGeometry width="423" height="87" as="geometry">
             <mxRectangle width="423" height="87" as="alternateBounds" />
           </mxGeometry>
@@ -50,16 +50,16 @@
           <mxGeometry x="324.6774193548387" y="170" width="98.38709677419355" height="30" as="geometry" />
         </mxCell>
         <mxCell id="coksm_kmtghOM9rdvQji-66" value="" style="group;align=left;" vertex="1" connectable="0" parent="coksm_kmtghOM9rdvQji-69">
-          <mxGeometry x="442.74" width="210" height="180" as="geometry" />
+          <mxGeometry x="442.74" width="167.26" height="180" as="geometry" />
         </mxCell>
-        <mxCell id="coksm_kmtghOM9rdvQji-67" value="&lt;ol style=&quot;font-size: 15px;&quot;&gt;&lt;li style=&quot;font-size: 15px;&quot;&gt;Отображение товаров&lt;/li&gt;&lt;li style=&quot;font-size: 15px;&quot;&gt;Авторизация&lt;/li&gt;&lt;li style=&quot;font-size: 15px;&quot;&gt;Поиск&lt;/li&gt;&lt;li style=&quot;font-size: 15px;&quot;&gt;Оплата&lt;/li&gt;&lt;li style=&quot;font-size: 15px;&quot;&gt;Корзина&lt;/li&gt;&lt;li style=&quot;font-size: 15px;&quot;&gt;Данные&lt;/li&gt;&lt;li style=&quot;font-size: 15px;&quot;&gt;Скидки, бонусы, промокоды и т.д.&lt;/li&gt;&lt;/ol&gt;" style="text;strokeColor=none;fillColor=none;html=1;whiteSpace=wrap;verticalAlign=middle;overflow=hidden;fontSize=15;" vertex="1" parent="coksm_kmtghOM9rdvQji-66">
-          <mxGeometry y="17.65" width="210" height="162.35" as="geometry" />
+        <mxCell id="coksm_kmtghOM9rdvQji-67" value="&lt;ol style=&quot;font-size: 15px;&quot;&gt;&lt;li style=&quot;font-size: 15px;&quot;&gt;Отображение&lt;/li&gt;&lt;li style=&quot;font-size: 15px;&quot;&gt;Авторизация&lt;/li&gt;&lt;li style=&quot;font-size: 15px;&quot;&gt;Поиск&lt;/li&gt;&lt;li style=&quot;font-size: 15px;&quot;&gt;Оплата&lt;/li&gt;&lt;li style=&quot;font-size: 15px;&quot;&gt;Корзина&lt;/li&gt;&lt;li style=&quot;font-size: 15px;&quot;&gt;Данные&lt;/li&gt;&lt;li style=&quot;font-size: 15px;&quot;&gt;Скидки, бонусы, промокоды и т.д.&lt;/li&gt;&lt;/ol&gt;" style="text;strokeColor=none;fillColor=none;html=1;whiteSpace=wrap;verticalAlign=middle;overflow=hidden;fontSize=15;" vertex="1" parent="coksm_kmtghOM9rdvQji-66">
+          <mxGeometry y="17.65058823529412" width="167.26" height="162.3494117647059" as="geometry" />
         </mxCell>
         <mxCell id="coksm_kmtghOM9rdvQji-68" value="Задачи:" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1;fontSize=15;" vertex="1" parent="coksm_kmtghOM9rdvQji-66">
           <mxGeometry x="33.45199999999999" width="100.35599999999998" height="35.294117647058826" as="geometry" />
         </mxCell>
         <mxCell id="coksm_kmtghOM9rdvQji-70" value="" style="group" vertex="1" connectable="0" parent="1">
-          <mxGeometry x="40" y="50" width="620" height="330" as="geometry" />
+          <mxGeometry x="40" y="81" width="620" height="330" as="geometry" />
         </mxCell>
         <mxCell id="coksm_kmtghOM9rdvQji-17" value="" style="group;align=left;fontSize=15;" vertex="1" connectable="0" parent="coksm_kmtghOM9rdvQji-70">
           <mxGeometry y="70" width="430" height="260" as="geometry" />
@@ -110,7 +110,7 @@
           <mxGeometry x="34" width="102" height="33.333333333333336" as="geometry" />
         </mxCell>
         <mxCell id="coksm_kmtghOM9rdvQji-1" value="&lt;font style=&quot;font-size: 36px;&quot;&gt;Горизонтальные уровни&lt;br&gt;Редактор 3D графики&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
-          <mxGeometry x="60" y="40" width="390" height="30" as="geometry" />
+          <mxGeometry x="48" y="65" width="370" height="30" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
