@@ -1,0 +1,100 @@
+<mxfile host="app.diagrams.net" modified="2023-11-09T11:22:06.262Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.5845.931 YaBrowser/23.9.3.931 Yowser/2.5 Safari/537.36" etag="f-bajo0GYo71PmwwlLVS" version="22.1.0" type="device">
+  <diagram name="Страница — 1" id="K5wVkQqeoXsz1eUJ0ybv">
+    <mxGraphModel dx="1050" dy="1783" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="owiVHzXIt4ebsnPVgmRW-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="owiVHzXIt4ebsnPVgmRW-1" target="owiVHzXIt4ebsnPVgmRW-2" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="owiVHzXIt4ebsnPVgmRW-1" value="User" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="370" y="-10" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="owiVHzXIt4ebsnPVgmRW-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="owiVHzXIt4ebsnPVgmRW-2" target="owiVHzXIt4ebsnPVgmRW-8" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="280" y="260" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="owiVHzXIt4ebsnPVgmRW-2" value="View" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="370" y="230" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="owiVHzXIt4ebsnPVgmRW-6" value="" style="group" parent="1" vertex="1" connectable="0">
+          <mxGeometry x="440" y="90" width="160" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="owiVHzXIt4ebsnPVgmRW-4" value="&lt;ul&gt;&lt;li style=&quot;border-color: var(--border-color);&quot;&gt;Авторизация&lt;/li&gt;&lt;li style=&quot;border-color: var(--border-color);&quot;&gt;Регистрация&lt;/li&gt;&lt;li style=&quot;border-color: var(--border-color);&quot;&gt;Резервирование столика&lt;/li&gt;&lt;/ul&gt;" style="text;strokeColor=none;fillColor=none;html=1;whiteSpace=wrap;verticalAlign=middle;overflow=hidden;" parent="owiVHzXIt4ebsnPVgmRW-6" vertex="1">
+          <mxGeometry y="20" width="160" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="owiVHzXIt4ebsnPVgmRW-5" value="Выполняет действие:" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="owiVHzXIt4ebsnPVgmRW-6" vertex="1">
+          <mxGeometry x="10" width="150" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="owiVHzXIt4ebsnPVgmRW-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="owiVHzXIt4ebsnPVgmRW-8" target="owiVHzXIt4ebsnPVgmRW-2" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="540" y="530" />
+              <mxPoint x="540" y="260" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="owiVHzXIt4ebsnPVgmRW-22" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="owiVHzXIt4ebsnPVgmRW-8" target="owiVHzXIt4ebsnPVgmRW-9" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="280" y="690" />
+              <mxPoint x="110" y="690" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="owiVHzXIt4ebsnPVgmRW-8" value="Presenter" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="220" y="495" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="owiVHzXIt4ebsnPVgmRW-26" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;" parent="1" source="owiVHzXIt4ebsnPVgmRW-9" target="owiVHzXIt4ebsnPVgmRW-8" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="110" y="530" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="owiVHzXIt4ebsnPVgmRW-9" value="Model" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="50" y="585" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="owiVHzXIt4ebsnPVgmRW-17" value="Передаёт запрашиваемые данные для формирования или обновления формы/ представления" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="550" y="392.5" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="owiVHzXIt4ebsnPVgmRW-21" value="" style="group" parent="1" vertex="1" connectable="0">
+          <mxGeometry x="270" y="320" width="160" height="195" as="geometry" />
+        </mxCell>
+        <mxCell id="owiVHzXIt4ebsnPVgmRW-13" value="Передаёт данные о выполненном действия" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="owiVHzXIt4ebsnPVgmRW-21" vertex="1">
+          <mxGeometry x="20" width="130" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="owiVHzXIt4ebsnPVgmRW-19" value="&lt;ul&gt;&lt;li style=&quot;border-color: var(--border-color);&quot;&gt;Авторизация/регистрация - логин, пароль пользователя&lt;/li&gt;&lt;li style=&quot;border-color: var(--border-color);&quot;&gt;Резервирование - номер столика, дата и время бронирования&lt;/li&gt;&lt;/ul&gt;" style="text;strokeColor=none;fillColor=none;html=1;whiteSpace=wrap;verticalAlign=middle;overflow=hidden;" parent="owiVHzXIt4ebsnPVgmRW-21" vertex="1">
+          <mxGeometry y="20" width="160" height="175" as="geometry" />
+        </mxCell>
+        <mxCell id="owiVHzXIt4ebsnPVgmRW-23" value="Делает запрос на обновление данных или же сверяет данные" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="300" y="610" width="90" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="owiVHzXIt4ebsnPVgmRW-27" value="Передаёт обновлённые данные или же получает результат проверки данных" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="10" y="485" width="100" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="owiVHzXIt4ebsnPVgmRW-34" value="" style="group" parent="1" vertex="1" connectable="0">
+          <mxGeometry x="254" y="90" width="160" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="owiVHzXIt4ebsnPVgmRW-35" value="&lt;ul&gt;&lt;li style=&quot;border-color: var(--border-color);&quot;&gt;Авторизация&lt;/li&gt;&lt;li style=&quot;border-color: var(--border-color);&quot;&gt;Регистрация&lt;/li&gt;&lt;li style=&quot;border-color: var(--border-color);&quot;&gt;Резервирование столика&lt;/li&gt;&lt;li style=&quot;border-color: var(--border-color);&quot;&gt;Карта столов&lt;/li&gt;&lt;/ul&gt;" style="text;strokeColor=none;fillColor=none;html=1;whiteSpace=wrap;verticalAlign=middle;overflow=hidden;" parent="owiVHzXIt4ebsnPVgmRW-34" vertex="1">
+          <mxGeometry y="20" width="160" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="owiVHzXIt4ebsnPVgmRW-36" value="Переходит на выбранную форму приложения" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="owiVHzXIt4ebsnPVgmRW-34" vertex="1">
+          <mxGeometry x="10" width="150" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="owiVHzXIt4ebsnPVgmRW-40" value="" style="group" parent="1" vertex="1" connectable="0">
+          <mxGeometry x="110" y="310" width="160" height="195" as="geometry" />
+        </mxCell>
+        <mxCell id="owiVHzXIt4ebsnPVgmRW-41" value="Выполняется запрос на получение данных для формы" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="owiVHzXIt4ebsnPVgmRW-40" vertex="1">
+          <mxGeometry x="20" y="20" width="130" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="owiVHzXIt4ebsnPVgmRW-42" value="&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;ul&gt;&lt;li style=&quot;border-color: var(--border-color);&quot;&gt;Резервирование - данные о свободных и занятых столах&lt;/li&gt;&lt;/ul&gt;" style="text;strokeColor=none;fillColor=none;html=1;whiteSpace=wrap;verticalAlign=middle;overflow=hidden;" parent="owiVHzXIt4ebsnPVgmRW-40" vertex="1">
+          <mxGeometry x="-10" y="40" width="160" height="90" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
