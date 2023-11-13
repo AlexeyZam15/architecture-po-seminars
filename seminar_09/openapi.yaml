@@ -1,0 +1,549 @@
+openapi: 3.0.1
+info: 
+  title: Получение информации о клиентах
+  version: 0.0.1
+servers:
+  - url: http://localhost:8080/api/v1/
+    description: Localhost
+paths:
+  /clients:
+    get:
+      summary: Метод получения списка клиентов
+      tags:
+        - Clients
+      operationId: getAllClients
+      responses:
+        "200" :
+          description: Успешный ответ со списком клиентов
+          content:
+            adplication/json:
+              schema:
+                $ref: "#/components/schemas/Clients"
+        "403" :
+          description: Нужна авторизация
+          content: 
+            adplication/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+        "404" :
+          description: Страница не найдена
+          content: 
+            adplication/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+        "501" :
+          description: Сервер не поддерживает данную функциональность
+          content: 
+            adplication/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+        "505" :
+          description: Сервер не поддерживает указанную версию HTTP-протокола
+          content: 
+            adplication/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+        "default" :
+          description: Всё остальное
+          content: 
+            adplication/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+    post:
+      summary: Метод создания нового клиента
+      tags:
+        - Clients
+      operationId: createClient
+      requestBody:
+        required: true
+        content:
+          adplication/json:
+            schema:
+              $ref: "#/components/schemas/Client"
+      responses:
+        "200":
+          description: Успешное создание клиента
+          content:
+            adplication/json:
+              schema:
+                $ref: "#/components/schemas/Client"
+        "403" :
+          description: Нужна авторизация
+          content: 
+            adplication/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+        "404" :
+          description: Страница не найдена
+          content: 
+            adplication/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+        "501" :
+          description: Сервер не поддерживает данную функциональность
+          content: 
+            adplication/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+        "505" :
+          description: Сервер не поддерживает указанную версию HTTP-протокола
+          content: 
+            adplication/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+        "default" :
+          description: Всё остальное
+          content: 
+            adplication/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+    put:
+      tags:
+        - Clients
+      summary: Метод обновления существующего клиента
+      operationId: updateClient
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Client'
+        required: true
+      responses:
+        "200":
+          description: Успешное обновление клиента
+          content:
+            adplication/json: 
+              schema:
+                $ref: "#/components/schemas/Client"
+        "403" :
+          description: Нужна авторизация
+          content: 
+            adplication/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+        "404" :
+          description: Страница не найдена
+          content: 
+            adplication/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+        "501" :
+          description: Сервер не поддерживает данную функциональность
+          content: 
+            adplication/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+        "505" :
+          description: Сервер не поддерживает указанную версию HTTP-протокола
+          content: 
+            adplication/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+        "default" :
+          description: Всё остальное
+          content: 
+            adplication/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+  /clients/{clientId}:
+    get:
+      summary: Метод получения клиента по id
+      tags:
+        - Clients
+      operationId: getClientId
+      parameters:
+        - name: clientId
+          in: path
+          required: true
+          description: id Клиента
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Успешный ответ получения клиента по id
+          content:
+            adplication/json:
+              schema:
+                $ref: "#/components/schemas/Client"
+        "403" :
+          description: Нужна авторизация
+          content: 
+            adplication/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+        "404" :
+          description: Страница не найдена
+          content: 
+            adplication/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+        "501" :
+          description: Сервер не поддерживает данную функциональность
+          content: 
+            adplication/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+        "505" :
+          description: Сервер не поддерживает указанную версию HTTP-протокола
+          content: 
+            adplication/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+        "default" :
+          description: Всё остальное
+          content: 
+            adplication/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+    delete:
+      summary: Удаление клиента по id
+      operationId: deleteClientById
+      tags:
+        - Clients
+      parameters:
+        - name: clientId
+          in: path
+          required: true
+          description: id Клиента
+          schema:
+            type: integer
+      responses:
+        "200":
+          description: Успешное удаление клиента
+          content:
+            adplication/json: {}
+        "403" :
+          description: Нужна авторизация
+          content: 
+            adplication/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+        "404" :
+          description: Страница не найдена
+          content: 
+            adplication/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+        "501" :
+          description: Сервер не поддерживает данную функциональность
+          content: 
+            adplication/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+        "505" :
+          description: Сервер не поддерживает указанную версию HTTP-протокола
+          content: 
+            adplication/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+        "default" :
+          description: Всё остальное
+          content: 
+            adplication/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+  /clouds:
+    get:
+      summary: Метод получения списка серверов
+      tags:
+        - Clouds
+      operationId: getAllClouds
+      responses:
+        "200" :
+          description: Успешный ответ со списком серверов
+          content:
+            adplication/json:
+              schema:
+                $ref: "#/components/schemas/Clouds"
+        "403" :
+          description: Нужна авторизация
+          content: 
+            adplication/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+        "404" :
+          description: Страница не найдена
+          content: 
+            adplication/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+        "501" :
+          description: Сервер не поддерживает данную функциональность
+          content: 
+            adplication/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+        "505" :
+          description: Сервер не поддерживает указанную версию HTTP-протокола
+          content: 
+            adplication/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+        "default" :
+          description: Всё остальное
+          content: 
+            adplication/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+    post:
+      summary: Метод создания нового сервера
+      tags:
+        - Clouds
+      operationId: createCloud
+      requestBody:
+        required: true
+        content:
+          adplication/json:
+            schema:
+              $ref: "#/components/schemas/Cloud"
+      responses:
+        "200":
+          description: Успешное создание сервера
+          content:
+            adplication/json:
+              schema:
+                $ref: "#/components/schemas/Cloud"
+        "403" :
+          description: Нужна авторизация
+          content: 
+            adplication/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+        "404" :
+          description: Страница не найдена
+          content: 
+            adplication/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+        "501" :
+          description: Сервер не поддерживает данную функциональность
+          content: 
+            adplication/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+        "505" :
+          description: Сервер не поддерживает указанную версию HTTP-протокола
+          content: 
+            adplication/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+        "default" :
+          description: Всё остальное
+          content: 
+            adplication/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+    put:
+      tags:
+        - Clouds
+      summary: Метод обновления существующего сервера по id
+      operationId: updateCloud
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Cloud'
+        required: true
+      responses:
+        "200":
+          description: Успешное обновление сервера
+          content:
+            adplication/json: 
+              schema:
+                $ref: "#/components/schemas/Cloud"
+        "403" :
+          description: Нужна авторизация
+          content: 
+            adplication/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+        "404" :
+          description: Страница не найдена
+          content: 
+            adplication/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+        "501" :
+          description: Сервер не поддерживает данную функциональность
+          content: 
+            adplication/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+        "505" :
+          description: Сервер не поддерживает указанную версию HTTP-протокола
+          content: 
+            adplication/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+        "default" :
+          description: Всё остальное
+          content: 
+            adplication/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+  /clouds/{cloudId}:
+    get:
+      summary: Метод получения сервера по id
+      tags:
+        - Clouds
+      operationId: getCloudId
+      parameters:
+        - name: cloudId
+          in: path
+          required: true
+          description: id сервера
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Успешный ответ получения сервера по id
+          content:
+            adplication/json:
+              schema:
+                $ref: "#/components/schemas/Cloud"
+        "403" :
+          description: Нужна авторизация
+          content: 
+            adplication/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+        "404" :
+          description: Страница не найдена
+          content: 
+            adplication/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+        "501" :
+          description: Сервер не поддерживает данную функциональность
+          content: 
+            adplication/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+        "505" :
+          description: Сервер не поддерживает указанную версию HTTP-протокола
+          content: 
+            adplication/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+        "default" :
+          description: Всё остальное
+          content: 
+            adplication/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+    delete:
+      summary: Удаление сервера по id
+      operationId: deleteCloutById
+      tags:
+        - Clouds
+      parameters:
+        - name: cloudId
+          in: path
+          required: true
+          description: id сервера
+          schema:
+            type: integer
+      responses:
+        "200":
+          description: Успешное удаление сервера
+          content:
+            adplication/json: {}
+        "403" :
+          description: Нужна авторизация
+          content: 
+            adplication/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+        "404" :
+          description: Страница не найдена
+          content: 
+            adplication/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+        "501" :
+          description: Сервер не поддерживает данную функциональность
+          content: 
+            adplication/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+        "505" :
+          description: Сервер не поддерживает указанную версию HTTP-протокола
+          content: 
+            adplication/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+        "default" :
+          description: Всё остальное
+          content: 
+            adplication/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+components:
+  schemas:
+    Client:
+      type: object
+      required:
+        - clientID
+        - email
+        - passwordHash
+      properties:
+        clientID:
+          type: integer
+          example: 1
+          description: id клиента
+        email:
+          type: string
+          example: test@example.ru
+          description: email клиента
+        passwordHash:
+          type: string
+    Clients:
+      type: array
+      items:
+        $ref: "#/components/schemas/Client"
+    Error:
+      type: object
+      required:
+        - codeError
+        - messageError
+      properties:
+        codeError:
+          type: string
+          example: 123qwe456
+        messageError:
+          type: string
+    Cloud:
+      type: object
+      required:
+      - RAM
+      - CPU
+      - HDD
+      - OS
+      - serverId
+      properties:
+        RAM:
+          type: integer
+          example: 256
+          description: Кол-во оперативной памяти
+        CPU:
+          type: integer
+          example: 8
+          description: Кол-во ядер процессора
+        HDD:
+          type: integer
+          example: 1024
+          description: Кол-во памяти на жёстком диске
+        serverId:
+          type: integer
+          example: 1
+          description: id Сервера
+        OS:
+         type: string
+         description: Операционная система
+         enum:
+          - Windows
+          - Linux
+    Clouds:
+      type: array
+      items:
+        $ref: "#/components/schemas/Cloud"
