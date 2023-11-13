@@ -1,0 +1,6 @@
+ALTER TABLE `Server` DROP FOREIGN KEY `Server_fk0`;
+
+ALTER TABLE `Order` DROP FOREIGN KEY `Order_fk0`;
+
+ALTER TABLE `Order` DROP FOREIGN KEY `Order_fk1`;
+
