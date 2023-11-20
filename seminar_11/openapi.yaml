@@ -1,0 +1,588 @@
+openapi: 3.0.1
+info:
+  title: Робот-пылесос
+  version: 0.0.1
+servers:
+  - url: http://localhost:8080/api/v1
+    description: Dev server
+paths:
+  /users:
+    get:
+      summary: Метод получения списка пользователей
+      tags:
+        - Users
+      operationId: getAllUsers
+      responses:
+        "200" :
+          description: Успешный ответ со списком пользователей
+          content:
+            adplication/json:
+              schema:
+                $ref: "#/components/schemas/Users"
+        "403" :
+          description: Нужна авторизация
+          content: 
+            adplication/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+        "404" :
+          description: Страница не найдена
+          content: 
+            adplication/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+        "501" :
+          description: Сервер не поддерживает данную функциональность
+          content: 
+            adplication/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+        "505" :
+          description: Сервер не поддерживает указанную версию HTTP-протокола
+          content: 
+            adplication/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+        "default" :
+          description: Всё остальное
+          content: 
+            adplication/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+    post:
+      summary: Метод создания нового пользователя
+      tags:
+        - Users
+      operationId: createUser
+      requestBody:
+        required: true
+        content:
+          adplication/json:
+            schema:
+              $ref: "#/components/schemas/User"
+      responses:
+        "200":
+          description: Успешное создание нового пользователя
+          content:
+            adplication/json:
+              schema:
+                $ref: "#/components/schemas/User"
+        "403" :
+          description: Нужна авторизация
+          content: 
+            adplication/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+        "404" :
+          description: Страница не найдена
+          content: 
+            adplication/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+        "501" :
+          description: Сервер не поддерживает данную функциональность
+          content: 
+            adplication/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+        "505" :
+          description: Сервер не поддерживает указанную версию HTTP-протокола
+          content: 
+            adplication/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+        "default" :
+          description: Всё остальное
+          content: 
+            adplication/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+    put:
+      tags:
+        - Users
+      summary: Метод обновления существующего пользователя
+      operationId: updateUser
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/User'
+        required: true
+      responses:
+        "200":
+          description: Успешное обновление пользователя
+          content:
+            adplication/json: 
+              schema:
+                $ref: "#/components/schemas/User"
+        "403" :
+          description: Нужна авторизация
+          content: 
+            adplication/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+        "404" :
+          description: Страница не найдена
+          content: 
+            adplication/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+        "501" :
+          description: Сервер не поддерживает данную функциональность
+          content: 
+            adplication/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+        "505" :
+          description: Сервер не поддерживает указанную версию HTTP-протокола
+          content: 
+            adplication/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+        "default" :
+          description: Всё остальное
+          content: 
+            adplication/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+  /users/{userId}:
+    get:
+      summary: Метод получения пользователя по id
+      tags:
+        - Users
+      operationId: getUserById
+      parameters:
+        - name: userId
+          in: path
+          required: true
+          description: id пользователя
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Успешный ответ получения пользователя по id
+          content:
+            adplication/json:
+              schema:
+                $ref: "#/components/schemas/User"
+        "403" :
+          description: Нужна авторизация
+          content: 
+            adplication/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+        "404" :
+          description: Страница не найдена
+          content: 
+            adplication/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+        "501" :
+          description: Сервер не поддерживает данную функциональность
+          content: 
+            adplication/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+        "505" :
+          description: Сервер не поддерживает указанную версию HTTP-протокола
+          content: 
+            adplication/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+        "default" :
+          description: Всё остальное
+          content: 
+            adplication/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+    delete:
+      summary: Удаление пользователя по id
+      operationId: deleteUserById
+      tags:
+        - Users
+      parameters:
+        - name: userId
+          in: path
+          required: true
+          description: id пользователя
+          schema:
+            type: integer
+      responses:
+        "200":
+          description: Успешное удаление пользователя
+          content:
+            adplication/json: {}
+        "403" :
+          description: Нужна авторизация
+          content: 
+            adplication/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+        "404" :
+          description: Страница не найдена
+          content: 
+            adplication/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+        "501" :
+          description: Сервер не поддерживает данную функциональность
+          content: 
+            adplication/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+        "505" :
+          description: Сервер не поддерживает указанную версию HTTP-протокола
+          content: 
+            adplication/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+        "default" :
+          description: Всё остальное
+          content: 
+            adplication/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+  /robots:
+    get:
+      summary: Метод получения списка роботов
+      tags:
+        - Robots
+      operationId: getAllRobots
+      responses:
+        "200" :
+          description: Успешный ответ со списком роботов
+          content:
+            adplication/json:
+              schema:
+                $ref: "#/components/schemas/Robots"
+        "403" :
+          description: Нужна авторизация
+          content: 
+            adplication/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+        "404" :
+          description: Страница не найдена
+          content: 
+            adplication/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+        "501" :
+          description: Сервер не поддерживает данную функциональность
+          content: 
+            adplication/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+        "505" :
+          description: Сервер не поддерживает указанную версию HTTP-протокола
+          content: 
+            adplication/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+        "default" :
+          description: Всё остальное
+          content: 
+            adplication/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+    post:
+      summary: Метод создания нового робота
+      tags:
+        - Robots
+      operationId: createRobot
+      requestBody:
+        required: true
+        content:
+          adplication/json:
+            schema:
+              $ref: "#/components/schemas/Robot"
+      responses:
+        "200":
+          description: Успешное создание нового робота
+          content:
+            adplication/json:
+              schema:
+                $ref: "#/components/schemas/Robot"
+        "403" :
+          description: Нужна авторизация
+          content: 
+            adplication/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+        "404" :
+          description: Страница не найдена
+          content: 
+            adplication/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+        "501" :
+          description: Сервер не поддерживает данную функциональность
+          content: 
+            adplication/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+        "505" :
+          description: Сервер не поддерживает указанную версию HTTP-протокола
+          content: 
+            adplication/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+        "default" :
+          description: Всё остальное
+          content: 
+            adplication/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+    put:
+      tags:
+        - Robots
+      summary: Метод обновления существующего робота
+      operationId: updateRobot
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Robot'
+        required: true
+      responses:
+        "200":
+          description: Успешное обновление робота
+          content:
+            adplication/json: 
+              schema:
+                $ref: "#/components/schemas/Robot"
+        "403" :
+          description: Нужна авторизация
+          content: 
+            adplication/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+        "404" :
+          description: Страница не найдена
+          content: 
+            adplication/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+        "501" :
+          description: Сервер не поддерживает данную функциональность
+          content: 
+            adplication/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+        "505" :
+          description: Сервер не поддерживает указанную версию HTTP-протокола
+          content: 
+            adplication/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+        "default" :
+          description: Всё остальное
+          content: 
+            adplication/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+  /robots/{robotId}:
+    get:
+      summary: Метод получения робота по id
+      tags:
+        - Robots
+      operationId: getRobotById
+      parameters:
+        - name: robotId
+          in: path
+          required: true
+          description: id робота
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Успешный ответ получения робота по id
+          content:
+            adplication/json:
+              schema:
+                $ref: "#/components/schemas/Robot"
+        "403" :
+          description: Нужна авторизация
+          content: 
+            adplication/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+        "404" :
+          description: Страница не найдена
+          content: 
+            adplication/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+        "501" :
+          description: Сервер не поддерживает данную функциональность
+          content: 
+            adplication/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+        "505" :
+          description: Сервер не поддерживает указанную версию HTTP-протокола
+          content: 
+            adplication/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+        "default" :
+          description: Всё остальное
+          content: 
+            adplication/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+    delete:
+      summary: Удаление робота по id
+      operationId: deleteRobotById
+      tags:
+        - Robots
+      parameters:
+        - name: robotId
+          in: path
+          required: true
+          description: id робота
+          schema:
+            type: integer
+      responses:
+        "200":
+          description: Успешное удаление робота
+          content:
+            adplication/json: {}
+        "403" :
+          description: Нужна авторизация
+          content: 
+            adplication/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+        "404" :
+          description: Страница не найдена
+          content: 
+            adplication/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+        "501" :
+          description: Сервер не поддерживает данную функциональность
+          content: 
+            adplication/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+        "505" :
+          description: Сервер не поддерживает указанную версию HTTP-протокола
+          content: 
+            adplication/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+        "default" :
+          description: Всё остальное
+          content: 
+            adplication/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+components:
+  schemas:
+    Robot:
+      type: object
+      required:
+        - id
+        - name
+        - macAdress
+        - passwordHash
+        - model
+        - serialNumber
+        - firmware
+        - status
+        - chargeLevel
+        - mileage
+        - commentary
+      properties:
+        id:
+          type: integer
+          example: 1
+          description: id робота
+        name:
+          type: string
+          example: Robot 1
+          description: имя робота
+        macAddress:
+          type: string
+          example: 66:77:88:99:aa:bb
+          description: mac-адрес робота
+        passwordHash:
+          type: integer
+          example: 6e105ae26596b297c71694485ab9b759
+          description: хеш-функция пароля
+        model:
+          type: string
+          example: AAA3000
+          description: модель робота
+        serialNumber:
+          type: string
+          example: R-001
+          description: серийный номер робота
+        firwmare:
+          type: string
+          example: RobotAPI 1.0.0
+          description: прошивка робота
+        status:
+         type: string
+         description: worked
+        chargeLevel:
+         type: integer
+         example: 40
+         description: уровень заряда робота в %
+        mileage:
+         type: integer
+         example: 200
+         description: пробег робота в метрах
+        commentary:
+         type: string
+         example: для уборки кухни
+         description: пользовательский комментарий о роботе
+    User:
+      type: object
+      required:
+        - id
+        - login
+        - passwordHash
+        - phone_number
+        - email
+      properties:
+        id:
+          type: integer
+          example: 1
+          description: id пользователя
+        login:
+          type: string
+          example: robotuser
+          description: логин пользователя
+        passwordHash:
+          type: string
+          example: 6e105ae26596b297c71694485ab9b759
+          description: хеш-функция пароля
+        phoneNumber:
+          type: integer
+          example: 88005553535
+          description: телефонный номер пользователя
+        email:
+          type: string
+          example: robotuser@mail.ru
+          description: email пользователя
+    Error:
+      type: object
+      required:
+        - errorMessage
+        - errorCode
+      properties:
+        errorMessage:
+          type: string
+        errorCode:
+          type: integer
+    Users:
+      type: array
+      items:
+        $ref: "#/components/schemas/User"
+    Robots:
+      type: array
+      items:
+        $ref: "#/components/schemas/Robot"
+          
